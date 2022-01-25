@@ -27,5 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Get one liner and update the README.md
-        run: github.event.commits[0].message
-
+        run: github.event.head_commit.message

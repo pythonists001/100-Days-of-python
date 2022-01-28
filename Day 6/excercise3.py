@@ -14,7 +14,7 @@ def turn_right():
     turn_left()
     turn_left()
 
-while front_is_clear():
+while front_is_clear():  ## when goes in infinite loop, best to move and turn left.
     move()
 turn_left()
 

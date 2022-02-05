@@ -26,12 +26,14 @@ def play():
     score = 0
 
     game_should_continue = True
+    account_a = get_random_account()
+    account_b = get_random_account()
 
     while game_should_continue:
         clear()
         print(logo)
         print(f"Your current score : {score}")
-        account_a = get_random_account()
+        account_a = account_b
         account_b = get_random_account()
 
         while account_a == account_b:
@@ -43,7 +45,7 @@ def play():
         print(f"Comapre A: {getDetails(account_a)}")
         print(vs)
         print(f"Comapre B: {getDetails(account_b)}")
-        choice = input("Your Answer. Press 'a' or 'b': ").lower()
+        choice = input("Your Answer. Press 'A' or 'B': ").lower()
         if check_answer(choice,a_followers,b_followers):
             score += 1
             print(f"Your score : {score}")

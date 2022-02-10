@@ -1,6 +1,7 @@
 # 100-Days-of-python
 
-This is my repo to track my progress for 100 days of Python
+#### This is my repo to track my progress for 100 days of Python
+![I Can do it](https://as1.ftcdn.net/v2/jpg/01/31/63/02/1000_F_131630292_suksNJucEZyQKh8rsDXBR4wfNwUDpiDY.jpg)
 
  - [X] Day 1
  - [X] Day 2
@@ -19,7 +20,3 @@ This is my repo to track my progress for 100 days of Python
  - [X] Day 15
  - [X] Day 16
  - [X] Day 17
- - [] Day 18
- - [] Day 19
- - [] Day 20
- - [] Day 21

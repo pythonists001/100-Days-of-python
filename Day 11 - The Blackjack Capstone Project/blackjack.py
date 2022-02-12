@@ -2,6 +2,7 @@ from art import logo
 from replit import clear
 import random
 
+
 ############### Our Blackjack House Rules #####################
 
 ## The deck is unlimited in size. 
@@ -20,6 +21,7 @@ def deal_card():
     card = random.choice(cards)
     return card
 
+
 def calculate_score(cards):
     """Take a list of cards and return the score calculated from the cards"""
     if sum(cards) == 21 and len(cards) == 2:
@@ -28,6 +30,7 @@ def calculate_score(cards):
         cards.remove(11)
         cards.append(1)
     return sum(cards)
+
 
 def compare(user_score, computer_score):
     if user_score == computer_score:
@@ -44,14 +47,13 @@ def compare(user_score, computer_score):
         return "You win"
     else:
         return "You lose"
-    
+
 
 def play_game():
     print(logo)
     user_cards = []
     computer_cards = []
     is_game_over = False
-
 
     for _ in range(2):
         user_cards.append(deal_card())
@@ -73,12 +75,13 @@ def play_game():
             else:
                 is_game_over = True
 
-    while computer_score !=0 and computer_score < 17:
+    while computer_score != 0 and computer_score < 17:
         computer_cards.append(deal_card())
         computer_score = calculate_score(computer_cards)
     print(f"  Your final hand: {user_cards}, final score: {user_score}")
     print(f"  Computer's final hand: {computer_cards}, final score: {computer_score}")
     print(compare(user_score, computer_score))
+
 
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n'").lower() == "y":
     clear()

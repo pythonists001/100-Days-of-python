@@ -1,10 +1,12 @@
 import random
 from replit import clear
-from art import logo,vs
+from art import logo, vs
 from game_data import data
+
 
 def get_random_account():
     return random.choice(data)
+
 
 def getDetails(account):
     name = account['name']
@@ -13,7 +15,8 @@ def getDetails(account):
 
     return f"{name}, a {description}, from {country}"
 
-#print(getDetails(get_random_account()))
+
+# print(getDetails(get_random_account()))
 
 def check_answer(guess, a_followers, b_followers):
     if a_followers > b_followers:
@@ -46,7 +49,7 @@ def play():
         print(vs)
         print(f"Comapre B: {getDetails(account_b)}")
         choice = input("Your Answer. Press 'A' or 'B': ").lower()
-        if check_answer(choice,a_followers,b_followers):
+        if check_answer(choice, a_followers, b_followers):
             score += 1
             print(f"Your score : {score}")
         else:
@@ -57,5 +60,6 @@ def play():
     play_again = input("Do you want to play again. Press 'y' to continue and 'n' to exit ").lower()
     if play_again == "y":
         play()
+
 
 play()

@@ -1,28 +1,35 @@
 from art import logo
 from replit import clear
 
+
 def add(n1, n2):
-    return n1+n2
+    return n1 + n2
+
 
 def subtract(n1, n2):
     return n1 - n2
 
+
 def multiply(n1, n2):
     return n1 * n2
 
-def divide(n1, n2):
-    return n1/n2
 
-def exponent(n1,n2):
+def divide(n1, n2):
+    return n1 / n2
+
+
+def exponent(n1, n2):
     return n1 ** n2
 
+
 operations = {
-    "+":add,
-    "-":subtract,
-    "*":multiply,
-    "/":divide,
-    "^":exponent, 
-    }
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide,
+    "^": exponent,
+}
+
 
 def calculator():
     clear()
@@ -40,7 +47,8 @@ def calculator():
         answer = calculation_function(num1, num2)
 
         print(f"{num1} {op_symbol} {num2} = {answer}")
-        choice = input(f"Type 'y' to continue calculation with {answer} or 'n' to start afresh or 'e' to exit out of it: ").lower()
+        choice = input(
+            f"Type 'y' to continue calculation with {answer} or 'n' to start afresh or 'e' to exit out of it: ").lower()
         if choice == 'y':
             num1 = answer
         elif choice == 'n':
@@ -49,5 +57,6 @@ def calculator():
         else:
             print("Bye Bye")
             break
+
 
 calculator()

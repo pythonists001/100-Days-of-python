@@ -14,6 +14,5 @@ def format_name(f_name, l_name):
     return f"Result: {formatted_fname} {formatted_lname}"
 
 
-
 print(format_name(input("Enter first name : "),
-    input("Enter last name: ")))
+                  input("Enter last name: ")))

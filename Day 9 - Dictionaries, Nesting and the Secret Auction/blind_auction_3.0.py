@@ -1,11 +1,13 @@
 from replit import clear
 from art import logo
-#HINT: You can call clear() to clear the output in the console.
+
+# HINT: You can call clear() to clear the output in the console.
 clear()
 bidder_available = True
 blind_auction = {}
 
 print(logo)
+
 
 def find_highest_bidder(bids):
     max_bidding = 0
@@ -19,7 +21,8 @@ def find_highest_bidder(bids):
     print(logo)
     print(f"{max_bidder_name} is the winner with the bid amount of ${max_bidding}")
 
-while bidder_available:    
+
+while bidder_available:
     clear()
     print(logo)
     bidder_name = input("Enter your name : ").capitalize()
@@ -29,4 +32,3 @@ while bidder_available:
     if are_bidders_available == "N":
         bidder_available = False
         find_highest_bidder(blind_auction)
-

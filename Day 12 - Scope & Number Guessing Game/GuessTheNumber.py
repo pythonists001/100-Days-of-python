@@ -11,11 +11,11 @@ def game():
         print("Welcome to the Number Guessing Game !!")
 
         print("I'm thinking of a umber between 1 and 100.")
-        my_number = random.randint(1,100)
+        my_number = random.randint(1, 100)
         print(f"My number is {my_number}")
         lives = {
-            "hard":5,
-            "easy": 10,}
+            "hard": 5,
+            "easy": 10, }
 
         difficulty_level = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 
@@ -35,6 +35,7 @@ def game():
         play_again = input("Do you want to play again, press 'y' to continue and 'n' to exit: ").lower()
         if play_again == "n":
             break
+
 
 want_to_play = input("Do you want to play a number guessing game ? Press 'y' to play or any key to exit: ")
 

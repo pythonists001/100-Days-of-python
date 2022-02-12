@@ -5,15 +5,17 @@ from art import logo
 EASY_LEVEL_TURNS = 10
 HARD_LEVEL_TURNS = 5
 
+
 def check_answers(guess, answer, turns):
     if guess > answer:
-        print ("Too high.")
+        print("Too high.")
         return turns - 1
     if guess < answer:
         print("Too low.")
-        return turns -1
+        return turns - 1
     else:
         print(f"You got it! The answer was {answer}")
+
 
 def set_difficulty():
     level = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
@@ -22,14 +24,15 @@ def set_difficulty():
     else:
         return HARD_LEVEL_TURNS
 
+
 def game():
     clear()
     print(logo)
-    
+
     print("Welcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
     answer = randint(1, 100)
-    print(f"Pssst, the correct answer is {answer}") 
+    print(f"Pssst, the correct answer is {answer}")
 
     turns = set_difficulty()
 
@@ -45,5 +48,6 @@ def game():
             return
         elif guess != answer:
             print("Guess again.")
+
 
 game()

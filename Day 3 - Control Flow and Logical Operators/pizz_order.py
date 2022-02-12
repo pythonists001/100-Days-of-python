@@ -14,11 +14,11 @@ Pepperoni for Medium or Large Pizza: +$3
 Extra cheese for any size pizza: +$1
 '''
 if size.upper() == "S":
-  bill += 15
+    bill += 15
 elif size.upper() == "M":
-  bill += 20
+    bill += 20
 else:
-  bill += 25
+    bill += 25
 
 '''
 if add_pepperoni.upper() == "Y" and size.upper() == "S":
@@ -28,12 +28,12 @@ elif add_pepperoni.upper() == "Y" and ( size.upper() == "M" or size.upper() == "
 '''
 
 if add_pepperoni == "Y":
-  if size == "S":
-    bill += 2
-  else:
-    bill += 3
+    if size == "S":
+        bill += 2
+    else:
+        bill += 3
 
 if extra_cheese.upper() == "Y":
-  bill += 1
+    bill += 1
 
 print(f"Total bill for your pizza is ${bill}.")

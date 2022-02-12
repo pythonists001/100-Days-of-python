@@ -9,10 +9,13 @@ Either the test front_is_clear() or wall_in_front(), right_is_clear() or wall_on
 How to use a while loop and if/elif/else statements.
 It might be useful to know how to use the negation of a test (not in Python).
 """
+
+
 def turn_right():
     turn_left()
     turn_left()
     turn_left()
+
 
 while front_is_clear():  ## when goes in infinite loop, best to move and turn left.
     move()
@@ -24,6 +27,6 @@ while not at_goal():
         move()
     elif front_is_clear():
         move()
-    
+
     else:
         turn_left()

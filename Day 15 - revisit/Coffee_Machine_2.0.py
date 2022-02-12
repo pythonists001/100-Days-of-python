@@ -1,4 +1,5 @@
 from replit import clear
+
 MENU = {
     "espresso": {
         "ingredients": {
@@ -32,12 +33,14 @@ resources = {
     "coffee": 100,
 }
 
+
 def is_resource_sufficient(order_ingredients):
     for item in order_ingredients:
         if order_ingredients[item] > resources[item]:
             print(f"Sorry there is not enough {item}")
             return False
     return True
+
 
 def process_coins():
     print("Please insert coins.")
@@ -46,6 +49,7 @@ def process_coins():
     total += int(input("how many nickles?: ")) * 0.05
     total += int(input("how many pennies?: ")) * 0.01
     return total
+
 
 def is_transaction_successful(money_received, drink_cost):
     if money_received >= drink_cost:
@@ -58,10 +62,12 @@ def is_transaction_successful(money_received, drink_cost):
         print("Sorry that's not enough money. Money refunded.")
         return False
 
+
 def make_coffee(drink_name, order_ingredients):
     for item in order_ingredients:
         resources[item] -= order_ingredients[item]
     print(f"Here is your {drink_name} ☕")
+
 
 is_on = True
 
@@ -73,7 +79,7 @@ while is_on:
         print(f"Water: {resources['water']}ml")
         print(f"Milk: {resources['milk']}ml")
         print(f"Coffee: {resources['coffee']}g")
-        print(f"Money: ${profit}") 
+        print(f"Money: ${profit}")
     else:
         drink = MENU[choice]
         clear()

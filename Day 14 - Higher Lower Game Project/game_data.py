@@ -301,4 +301,4 @@ data = [
     }
 ]
 
-#print(f"{data[0]['name']}, a {data[0]['description']}, from {data[0]['country']}")
+# print(f"{data[0]['name']}, a {data[0]['description']}, from {data[0]['country']}")

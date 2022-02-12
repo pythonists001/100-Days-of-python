@@ -2,16 +2,16 @@
 
 enemies = "Skeleton"
 
+
 def increase_enemies():
     enemies = "Zombie"
     print(f"enemies inside function: {enemies}")
 
+
 increase_enemies()
 print(f"enemies outside function: {enemies}")
 
-
 #############################
-
 
 
 """
@@ -33,9 +33,12 @@ print(f"enemies outside function: {countOfCandidates}")
 """
 ## better way is to
 countOfCandidates = 1
+
+
 def increaseCount():
     print(f"count inside function: {countOfCandidates}")
     return countOfCandidates + 5
+
 
 countOfCandidates = increaseCount()
 print(f"count outside function: {countOfCandidates}")

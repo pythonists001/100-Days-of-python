@@ -37,7 +37,10 @@ while is_race_on:
 
 screen.clearscreen()
 t.pu()
-t.hideturtle()
+#winning_turtle = Turtle('turtle')
+#winning_turtle.color(winning_color)
+#winning_turtle.shapesize(10, 10, 1)
 t.goto(x=-230, y=0)
+t.hideturtle()
 t.write(f"The {winning_color} turtle is the winner!", font=("Arial",16,"normal"))
 screen.exitonclick()

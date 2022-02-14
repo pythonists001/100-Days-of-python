@@ -1,5 +1,5 @@
 from turtle import Turtle, Screen
-import turtle
+import turtle as t
 import random
 
 is_race_on = False
@@ -36,6 +36,8 @@ while is_race_on:
         turtle.forward(rand_distance)
 
 screen.clearscreen()
-turtle.goto(x=-230, y=0)
-turtle.write(f"The {winning_color} turtle is the winner!", font=("Arial",16,"normal"))
+t.pu()
+t.hideturtle()
+t.goto(x=-230, y=0)
+t.write(f"The {winning_color} turtle is the winner!", font=("Arial",16,"normal"))
 screen.exitonclick()

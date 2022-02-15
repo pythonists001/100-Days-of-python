@@ -22,4 +22,4 @@
  - [X] Day 17  : The Quiz Project
  - [X] Day 18  : Turtle and GUI
  - [X] Day 19  : Instances, State and Higher Order Functions
- - [ ] Day 20  : Build the Snake Game Part 1 : Animation and Coordinates
+ - [X] Day 20  : Build the Snake Game Part 1 : Animation and Coordinates

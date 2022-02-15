@@ -16,7 +16,11 @@
 - [X] Day 10  : Functions with Outputs
 - [X] Day 11  : The BlackJack Capstone Project
 - [X] Day 12  : Scope & Number Guessing Game
+<<<<<<< HEAD
 - [X] Day 13  : Debugging - How to Find and Fix errors in your code
+=======
+- [X] Day 13  : Debugging - How to Find and Fix errors in your code 
+>>>>>>> 7ff783294347e8eaf4fb9e195477a07a4ad1c87f
 - [X] Day 14  : Higher lower game Project
 - [X] Day 15  : Local development Environment setup & the cofee machine
 - [X] Day 16  : OOP
@@ -24,4 +28,7 @@
 - [X] Day 18  : Turtle and GUI
 - [X] Day 19  : Instances, State and Higher Order Functions
 - [X] Day 20  : Build the Snake Game Part 1 : Animation and Coordinates
+<<<<<<< HEAD
 - [X] Day 21  : Build the Snake Game Part 2 : Inheritance & List Slicing
+=======
+>>>>>>> 7ff783294347e8eaf4fb9e195477a07a4ad1c87f

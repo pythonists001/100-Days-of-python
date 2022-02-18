@@ -25,3 +25,4 @@
 - [X] Day 19  : Instances, State and Higher Order Functions
 - [X] Day 20  : Build the Snake Game Part 1 : Animation and Coordinates
 - [X] Day 21  : Build the Snake Game Part 2 : Inheritance and List Slicing
+- [X] Day 22  : Build Pong : The Famous arcade game

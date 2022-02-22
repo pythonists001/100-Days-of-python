@@ -27,3 +27,4 @@
 - [X] Day 21  : Build the Snake Game Part 2 : Inheritance and List Slicing
 - [X] Day 22  : Build Pong : The Famous arcade game
 - [X] Day 23  : The Turtle crossing capestone project
+- [X] Day 24  : Files, Directories and Paths

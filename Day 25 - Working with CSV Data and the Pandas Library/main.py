@@ -1,53 +1,45 @@
-# with open("Day 25 - Working with CSV Data and the Pandas Library/weather_data.csv") as f:
-#     contents = f.readlines()
-#     print(contents)
-#     for _ in contents:
-#         print(_.strip())
-
-# import csv
-# with open("Day 25 - Working with CSV Data and the Pandas Library/weather_data.csv") as data_file:
-#     data = csv.reader(data_file)
-#     temperature = []
-#     for row in data:
-#         if row[1] != "temp":
-#             temperature.append(int(row[1]))
-#     print(temperature)
-
+from hashlib import new
+import turtle
 import pandas as pd
-data = pd.read_csv("Day 25 - Working with CSV Data and the Pandas Library/weather_data.csv")
-# print(type(data))
-# print(data["temp"])
+# def get_mouse_click_coor(x, y):
+#     print(x, y)
 
-# data_dict = data.to_dict()
-# print(data_dict)
+# turtle.onscreenclick(get_mouse_click_coor)
+screen = turtle.Screen()
+screen.title("U.S. States Game")
 
-# temp_list = data["temp"].to_list()
-# print(temp_list)
-# # print(f"avg={round(sum(temp_list)/len(temp_list),2)}")
-# print(data["temp"].mean())
-# print(data["temp"].max())
+image = "Day 25 - Working with CSV Data and the Pandas Library/blank_states_img.gif"
+states_csv = "Day 25 - Working with CSV Data and the Pandas Library/50_states.csv"
 
-## Get data in row
-# print(data[data["day"] == "Monday"])
-# print(data[data.day == "Monday"])
+screen.addshape(image)
 
-## pull row data where temperature is max
-print(data[data.temp == data.temp.max()])
+turtle.shape(image)
+data = pd.read_csv(states_csv)
+all_states = data.state.to_list()
 
-#getting a specific value from a row
-monday = data[data.day == "Monday"]
-print(monday.condition)
-monday_temp = int(monday.temp)
-monday_temp_F = monday_temp * 9/5 + 32
-print(monday_temp_F)
+guessed_states = []
+while len(guessed_states) < 50:
 
+    answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct", 
+                                    prompt="What's another state's name?").title()
+    if answer_state == "Exit":
+        missing_state = []
+        for state in all_states:
+            if state not in guessed_states:
+                missing_state.append(state)
+        new_data = pd.DataFrame(missing_state)
+        
+        new_data.to_csv("Day 25 - Working with CSV Data and the Pandas Library/states_to_learn.csv")
+        break
+    # print(answer_state)
+    if answer_state in all_states and (answer_state not in guessed_states):
+        guessed_states.append(answer_state)
+        t = turtle.Turtle()
+        t.hideturtle()
+        t.pu()
+        state_data = data[data.state == answer_state]
+        t.goto(int(state_data.x), int(state_data.y))
+        t.write(answer_state) #state_data.state.item()
 
-# Create a dataframe from scratch
-data_dict = {
-    "students" : ["Any", "James", "Angela"],
-    "scores": [76, 56, 65]
-}
-
-data = pd.DataFrame(data_dict)
-print(data)
-data.to_csv("new_data.csv")
+# turtle.mainloop()
+## States to learn.csv

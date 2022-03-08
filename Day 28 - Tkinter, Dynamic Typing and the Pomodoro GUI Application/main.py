@@ -1,7 +1,6 @@
 from tkinter import *
 import math
 
-from matplotlib.pyplot import text
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
 RED = "#e7305b"

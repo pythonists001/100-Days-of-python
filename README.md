@@ -32,3 +32,4 @@
 - [X] Day 26  : List comprehension and the NATO Alphabet
 - [X] Day 27  : Tkinter,*args, **kwargs and Creating GUI Programs
 - [X] Day 28  : Tkinter, Dynamic Typing and the Pomodoro GUI Application
+- [X] Day 29  : Building a Password Manager GUI App with Tkinter
